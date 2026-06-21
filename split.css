@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* ══════════════════════════════════════════
+   SPLIT SCREEN — index.html
+══════════════════════════════════════════ */
+
+body.split-page {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    background: #000;
+    font-family: 'Inter', sans-serif;
+}
+
+/* ── CONTENEDOR ── */
+.split-screen {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+/* ── CADA MITAD ── */
+.split-side {
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-decoration: none;
+    cursor: pointer;
+    transition: flex 0.6s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.split-side:hover {
+    flex: 1.35;
+}
+
+/* ── FONDO ── */
+.split-bg {
+    position: absolute;
+    inset: 0;
+    transition: transform 0.7s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.split-side:hover .split-bg {
+    transform: scale(1.04);
+}
+
+.split-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: saturate(0.8);
+    transition: filter 0.6s;
+}
+
+.split-side:hover .split-bg img {
+    filter: saturate(1.1);
+}
+
+/* placeholder para cuando no hay foto de fotografía */
+.split-bg-placeholder {
+    width: 100%;
+    height: 100%;
+    background:
+        linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 40%, #0f0f0f 100%);
+}
+
+/* ── OVERLAYS ── */
+.split-overlay {
+    position: absolute;
+    inset: 0;
+    transition: opacity 0.5s;
+}
+
+/* fotografía: overlay oscuro elegante */
+.split-overlay-foto {
+    background: linear-gradient(
+        135deg,
+        rgba(0,0,0,0.55) 0%,
+        rgba(0,0,0,0.3) 100%
+    );
+}
+
+.split-side.split-foto:hover .split-overlay-foto {
+    opacity: 0.7;
+}
+
+/* impresiones: overlay oscuro con tinte cálido pixel */
+.split-overlay-impresiones {
+    background: linear-gradient(
+        135deg,
+        rgba(0,0,0,0.6) 0%,
+        rgba(10,5,0,0.4) 100%
+    );
+}
+
+.split-side.split-impresiones:hover .split-overlay-impresiones {
+    opacity: 0.75;
+}
+
+/* ── CONTENIDO ── */
+.split-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.split-eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin: 0;
+}
+
+.split-title {
+    margin: 0;
+    line-height: 1;
+    transition: transform 0.4s, letter-spacing 0.4s;
+}
+
+/* fotografía: serif elegante */
+.split-title-foto {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(3.5rem, 7vw, 6rem);
+    font-weight: 400;
+    font-style: italic;
+    color: white;
+    text-shadow: 0 2px 40px rgba(0,0,0,0.5);
+}
+
+.split-side.split-foto:hover .split-title-foto {
+    transform: translateY(-4px);
+    letter-spacing: 0.03em;
+}
+
+/* impresiones: pixel font */
+.split-title-impresiones {
+    font-family: 'Press Start 2P', monospace;
+    font-size: clamp(1.4rem, 3.5vw, 2.8rem);
+    font-weight: 400;
+    color: #f0c040;
+    text-shadow: 4px 4px 0 #e07030, 8px 8px 0 rgba(224,112,48,0.3);
+    line-height: 1.3;
+}
+
+.split-side.split-impresiones:hover .split-title-impresiones {
+    transform: translateY(-4px);
+}
+
+.split-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.55);
+    letter-spacing: 0.08em;
+    margin: 0;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.4s 0.1s, transform 0.4s 0.1s;
+}
+
+.split-side:hover .split-desc {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.split-cta {
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.4s 0.18s, transform 0.4s 0.18s;
+    padding: 10px 22px;
+}
+
+.split-side:hover .split-cta {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.split-cta-foto {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color: white;
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+}
+
+.split-cta-impresiones {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.55rem;
+    color: #f0c040;
+    border: 2px solid #f0c040;
+    box-shadow: 3px 3px 0 #e07030;
+    line-height: 1.8;
+}
+
+/* ── DIVIDER CENTRAL ── */
+.split-divider {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background: #0a0a0a;
+    border: 2px solid rgba(255,255,255,0.1);
+    border-radius: 50%;
+    transition: border-color 0.3s;
+    pointer-events: none;
+}
+
+.split-brand {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.38rem;
+    color: #f0c040;
+    text-align: center;
+    line-height: 1.8;
+    letter-spacing: 0.05em;
+}
+
+/* vertical line through divider */
+.split-divider::before,
+.split-divider::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 1px;
+    background: rgba(255,255,255,0.12);
+    pointer-events: none;
+}
+.split-divider::before {
+    bottom: 100%;
+    height: 50vh;
+}
+.split-divider::after {
+    top: 100%;
+    height: 50vh;
+}
+
+/* ══════════════════════════════════════════
+   RESPONSIVE — mobile: stack vertical
+══════════════════════════════════════════ */
+@media (max-width: 700px) {
+    body.split-page { overflow-y: auto; }
+
+    .split-screen {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .split-side {
+        flex: none;
+        height: 50vh;
+        min-height: 280px;
+    }
+
+    .split-side:hover { flex: none; }
+
+    .split-divider {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .split-divider::before,
+    .split-divider::after {
+        display: none;
+    }
+
+    .split-desc,
+    .split-cta {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .split-title-foto  { font-size: 2.8rem; }
+    .split-title-impresiones { font-size: 1.3rem; }
+}
