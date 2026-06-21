@@ -8,6 +8,7 @@
 </head>
 
 <body>
+<canvas id="pixel-canvas"></canvas>
 
 <nav class="navbar">
     <a class="nav-logo" href="index.html">MEDIO PIXEL</a>
@@ -21,7 +22,7 @@
 <header class="hero">
     <div class="hero-content">
         <p class="hero-tag">Impresiones fotográficas y papelería creativa</p>
-        <h1>Tus recuerdos,<br>en papel.</h1>
+        <h1>Regalá memorias.</h1>
         <p class="hero-sub">Productos personalizados hechos con amor desde Berazategui.</p>
         <div class="hero-actions">
             <a class="btn btn-primary" href="catalogo.html">Ver catálogo completo</a>
@@ -30,7 +31,7 @@
     </div>
 </header>
 
-<section class="mas-vendidos">
+<section class="mas-vendidos reveal">
     <div class="section-header">
         <span class="section-tag">Lo más pedido</span>
         <h2>Los favoritos de nuestros clientes</h2>
@@ -39,7 +40,7 @@
     <div class="featured-grid">
 
         <a class="featured-card featured-large" href="https://wa.me/p/28219333627754403/5491161692631" target="_blank">
-            <img src="img/combo9.jpg" alt="Pack Cumple">
+            <img src="img/souvenir.jpeg" alt="Pack Cumple">
             <div class="featured-overlay">
                 <span class="featured-badge">⭐ El más popular</span>
                 <h3>Pack Cumple</h3>
@@ -52,7 +53,7 @@
         <div class="featured-column">
 
             <a class="featured-card" href="https://wa.me/p/27323140797335751/5491161692631" target="_blank">
-                <img src="img/combo8.jpg" alt="Pack Casamiento">
+                <img src="img/librocasamiento.jpeg" alt="Pack Casamiento">
                 <div class="featured-overlay">
                     <span class="featured-badge">💍 Para el gran día</span>
                     <h3>Pack Casamiento</h3>
@@ -63,7 +64,7 @@
             </a>
 
             <a class="featured-card" href="https://wa.me/p/28028265713443707/5491161692631" target="_blank">
-                <img src="img/combo1.jpeg" alt="Combo Retro Polaroid">
+                <img src="img/polaroid.jpeg" alt="Combo Retro Polaroid">
                 <div class="featured-overlay">
                     <span class="featured-badge">📷 Clásico</span>
                     <h3>Combo Retro Polaroid</h3>
@@ -74,7 +75,6 @@
             </a>
 
         </div>
-
     </div>
 
     <div class="featured-footer">
@@ -83,7 +83,7 @@
 
 </section>
 
-<section class="como-comprar">
+<section class="como-comprar reveal">
     <div class="section-header">
         <span class="section-tag">Simple y rápido</span>
         <h2>¿Cómo comprar?</h2>
@@ -107,7 +107,7 @@
     </div>
 </section>
 
-<section class="about-section">
+<section class="about-section reveal">
     <div class="about-inner">
         <div class="about-text">
             <span class="section-tag">Quiénes somos</span>
@@ -132,7 +132,7 @@
     </div>
 </section>
 
-<section id="contacto" class="contact-section">
+<section id="contacto" class="contact-section reveal">
     <div class="contact-inner">
         <h2>¿Tenés alguna duda?</h2>
         <p>Escribinos y te respondemos lo antes posible.</p>
@@ -152,5 +152,6 @@
     </div>
 </footer>
 
+<script src="pixel.js"></script>
 </body>
 </html>
