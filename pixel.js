@@ -94,7 +94,7 @@
   overlay.className = 'victory-overlay';
   overlay.innerHTML = `
     <div class="victory-flash"></div>
-    <div class="victory-text">★ NIVEL UP ★</div>
+    <div class="victory-text">★ LEVEL UP ★</div>
   `;
   document.body.appendChild(overlay);
 
