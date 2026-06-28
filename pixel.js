@@ -164,3 +164,49 @@
     triggerVictory(link.href, isNewTab);
   });
 })();
+
+
+/* ── 4. CARD SLIDERS ── */
+(function () {
+  document.querySelectorAll('.card-slider').forEach(function (slider) {
+    const track  = slider.querySelector('.card-slider-track');
+    const dots   = slider.querySelectorAll('.slider-dot');
+    const count  = parseInt(slider.dataset.count, 10);
+    if (count <= 1) return;
+
+    let current = 0;
+
+    function goTo(idx) {
+      current = (idx + count) % count;
+      track.style.transform = 'translateX(-' + (current * 100) + '%)';
+      dots.forEach(function (d, i) {
+        d.classList.toggle('active', i === current);
+      });
+    }
+
+    /* flechas — stopPropagation para no disparar el link de la card */
+    slider.querySelector('.prev').addEventListener('click', function (e) {
+      e.preventDefault(); e.stopPropagation(); goTo(current - 1);
+    });
+    slider.querySelector('.next').addEventListener('click', function (e) {
+      e.preventDefault(); e.stopPropagation(); goTo(current + 1);
+    });
+
+    /* dots */
+    dots.forEach(function (dot, i) {
+      dot.addEventListener('click', function (e) {
+        e.preventDefault(); e.stopPropagation(); goTo(i);
+      });
+    });
+
+    /* swipe táctil */
+    var startX = 0;
+    slider.addEventListener('touchstart', function (e) {
+      startX = e.touches[0].clientX;
+    }, { passive: true });
+    slider.addEventListener('touchend', function (e) {
+      var diff = startX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) goTo(diff > 0 ? current + 1 : current - 1);
+    });
+  });
+})();
