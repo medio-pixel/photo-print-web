@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspiración | Medio Pixel</title>
+    <meta name="description" content="Ideas para decorar con fotos, regalos originales, álbumes, collages y fotografía profesional.">
+    <meta property="og:title" content="Inspiración | Medio Pixel">
+    <meta property="og:description" content="Ideas para decorar, regalar y recordar. Impresiones y fotografía profesional.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="inspiracion.css">
+    <link rel="icon" type="image/png" href="img/logo-medio-pixel.png">
+</head>
+<body class="insp-page">
+
+<header>
+<nav class="navbar">
+    <a class="nav-logo" href="index.html">MEDIO PIXEL</a>
+    <div class="nav-links">
+        <a href="fotografia.html">Fotografía</a>
+        <a href="impresiones.html">Impresiones</a>
+        <a href="inspiracion.html" class="active">Inspiración</a>
+        <a class="btn btn-nav" href="https://wa.me/5491161692631" target="_blank">WhatsApp</a>
+    </div>
+</nav>
+</header>
+
+<main>
+
+<section class="insp-hero">
+    <span class="insp-hero-eyebrow">Ideas para vos</span>
+    <h1>Inspirate</h1>
+    <p>Impresiones, regalos, decoración y fotografía profesional. Todo en un lugar.</p>
+</section>
+
+<div class="insp-filters" id="inspFilters" role="tablist">
+    <button class="insp-filter active" data-filter="all">Todo</button>
+    <button class="insp-filter" data-filter="impresion">Impresiones</button>
+    <button class="insp-filter" data-filter="regalo">Regalos</button>
+    <button class="insp-filter" data-filter="album">Álbumes</button>
+    <button class="insp-filter" data-filter="pared">Paredes</button>
+    <button class="insp-filter" data-filter="concierto">Conciertos</button>
+    <button class="insp-filter" data-filter="casamiento">Casamientos</button>
+    <button class="insp-filter" data-filter="evento">Eventos</button>
+</div>
+
+<!-- TODO MEZCLADO EN UN SOLO FEED -->
+<section class="insp-feed" id="inspFeed" aria-label="Feed de inspiración">
+
+    <!-- impresión + concierto intercalados -->
+    <article class="insp-card insp-type-foto" data-cat="concierto">
+        <div class="insp-img foto-img-wrap">
+            <img src="https://res.cloudinary.com/dkpachrss/image/upload/w_600,q_auto,f_auto/DSC05208s_vf4wji.jpg" alt="Fotografía de concierto" loading="lazy">
+        </div>
+        <div class="insp-body">
+            <span class="insp-badge">Conciertos</span>
+            <h3>JG Rock</h3>
+            <p>Energía en escena, capturada al instante.</p>
+            <div class="insp-action">
+                <a class="insp-cta" href="https://wa.me/5491161692631?text=Hola%2C%20vi%20las%20fotos%20de%20conciertos%20y%20me%20interesa%20contratar%20una%20sesi%C3%B3n." target="_blank">Contratar →</a>
+            </div>
+        </div>
+    </article>
+
+    <article class="insp-card" data-cat="regalo impresion">
+        <div class="insp-img foto-img-wrap">
+            <img src="img/combo9.jpg" alt="Pack cumpleaños" loading="lazy">
+        </div>
+        <div class="insp-body">
+            <span class="insp-badge">Regalos</span>
+            <h3>Pack Cumple</h3>
+            <p>Souvenir imantado, bolsitas, álbum de firmas y toppers personalizados.</p>
+            <div class="insp-action">
+                <a class="insp-cta" href="https://wa.me/5491161692631?text=Hola%2C%20me%20interesa%20el%20Pack%20Cumple" target="_blank">Pedir →</a>
+            </div>
+        </div>
+    </article>
+
+    <article class="insp-card insp-type-foto" data-cat="casamiento">
+        <div class="insp-img foto-img-wrap">
+            <img src="https://res.cloudinary.com/dkpachrss/image/upload/w_600,q_auto,f_auto/6_aucsuv.png" alt="Casamiento Cecy y Cris" loading="lazy">
+        </div>
+        <div class="insp-body">
+            <span class="insp-badge">Casamientos</span>
+            <h3>Cecy &amp; Cris</h3>
+            <p>El fotolibro de su gran día.</p>
+            <div class="insp-action">
+                <a class="insp-cta" href="https://wa.me/5491161692631?text=Hola%2C%20me%20gustar%C3%ADa%20contratar%20fotograf%C3%ADa%20de%20casamiento." target="_blank">Contratar →</a>
+            </div>
+        </div>
+    </article>
+
+    <article class="insp-card" data-cat="album impresion">
+        <div class="insp-img foto-img-wrap">
+            <img src="img/combo10.jpg" alt="Álbum de firmas" loading="lazy">
+        </div>
+        <div class="insp-body">
+            <span class="insp-badge">Álbumes</span>
+            <h3>Libro de firmas</h3>
+            <p>El recuerdo más especial con los deseos de todos tus seres queridos.</p>
+            <div class="insp-action">
+                <a class="insp-cta" href="https://wa.me/5491161692631?text=Hola%2C%20me%20interesa%20un%20libro%20de%20firmas" target="_blank">Pedir →</a>
+            </div>
+        </div>
+    </article>
+
+    <article class="insp-card insp-type-foto" data-cat="concierto">
+        <div class="insp-img foto-img-wrap">
+            <img src="https://res.cloudinary.com/dkpachrss/image/upload/w_600,q_auto,f_auto/DSC05096_btpvnh.jpg" alt="Fotografía concierto" loading="lazy">
+        </div>
+        <div class="insp-body">
+            <span class="insp-badge">Conciertos</span>
+            <h3>Kill Hill Humanity</h3>
+            <p>Momentos únicos que solo pasan una vez.</p>
+            <div class="insp-action">
+                <a class="insp-cta" href="https://wa.me/5491161692631?text=Hola%2C%20vi%20fotos%20de%20conciertos%20y%20me%20interesa%20contratar." target="_blank">Contratar →</a>
+            </div>
+        </div>
+    </article>
+
+    <article class="insp-card" data-cat="impresion pared">
+        <div class="insp-img foto-img-wrap">
+            <img src="img/combo1.jpeg" alt="Combo retro polaroid" loading="lazy">
+        </div>
+        <div class="insp-body">
+            <span class="insp-badge">Polaroids</span>
+            <h3>Combo Retro</h3>
+            <p>Mini polaroids y clásicas para collages únicos.</p>
+            <div class="insp-action">
+                <a class="insp-cta" href="https://wa.me/5491161692631?text=Hola%2C%20me%20interesa%20el%20Combo%20Retro" target="_blank">Pedir →</a>
+            </div>
+        </div>
+    </article>
+
+    <article class="insp-card insp-type-foto" data-cat="evento">
+        <div class="insp-img foto-img-wrap">
+            <img src="https://res.cloudinary.com/dkpachrss/image/upload/w_600,q_auto,f_auto/DSC02936_zcrcyd.jpg" alt="Fotografía de evento" loading="lazy">
+        </div>
+        <div class="insp-body">
+            <span class="insp-badge">Eventos</span>
+            <h3>Retratos auténticos</h3>
+            <p>Momentos espontáneos capturados sin que te des cuenta.</p>
+            <div class="insp-action">
+                <a class="insp-cta" href="https://wa.me/5491161692631?text=Hola%2C%20vi%20fotos%20de%20eventos%20y%20me%20interesa%20contratar." target="_blank">Contratar →</a>
+            </div>
+        </div>
+    </article>
+
+    <article class="insp-card" data-cat="regalo impresion album">
+        <div class="insp-img foto-img-wrap">
+            <img src="img/combo8.jpg" alt="Pack casamiento" loading="lazy">
+        </div>
+        <div class="insp-body">
+            <span class="insp-badge">Casamientos</span>
+            <h3>Pack Casamiento</h3>
+            <p>Invitación digital, numerador de mesa y álbum. Todo en un solo pack.</p>
+            <div class="insp-action">
+                <a class="insp-cta" href="https://wa.me/5491161692631?text=Hola%2C%20me%20interesa%20el%20Pack%20Casamiento" target="_blank">Pedir →</a>
+            </div>
+        </div>
+    </article>
+
+    <article class="insp-card insp-type-foto" data-cat="concierto">
+        <div class="insp-img foto-img-wrap">
+            <img src="https://res.cloudinary.com/dkpachrss/image/upload/w_600,q_auto,f_auto/DSC04937_g9rs9b.jpg" alt="Concierto rock" loading="lazy">
+        </div>
+        <div class="insp-body">
+            <span class="insp-badge">Conciertos</span>
+            <h3>Rock en vivo</h3>
+            <p>Primer plano que habla sin palabras.</p>
+            <div class="insp-action">
+                <a class="insp-cta" href="https://wa.me/5491161692631?text=Hola%2C%20me%20interesa%20contratar%20fotograf%C3%ADa%20de%20concierto." target="_blank">Contratar →</a>
+            </div>
+        </div>
+    </article>
+
+    <article class="insp-card" data-cat="album pared impresion">
+        <div class="insp-img foto-img-wrap">
+            <img src="img/combo5.jpeg" alt="Almanaque polaroid" loading="lazy">
+        </div>
+        <div class="insp-body">
+            <span class="insp-badge">Álbumes</span>
+            <h3>Almanaque Polaroid</h3>
+            <p>Un año de recuerdos en polaroids imantadas para la heladera.</p>
+            <div class="insp-action">
+                <a class="insp-cta" href="https://wa.me/5491161692631?text=Hola%2C%20me%20interesa%20el%20Almanaque%20Polaroid" target="_blank">Pedir →</a>
+            </div>
+        </div>
+    </article>
+
+    <article class="insp-card insp-type-foto" data-cat="casamiento">
+        <div class="insp-img foto-img-wrap">
+            <img src="https://res.cloudinary.com/dkpachrss/image/upload/w_600,q_auto,f_auto/9_r5xkuz.png" alt="Casamiento" loading="lazy">
+        </div>
+        <div class="insp-body">
+            <span class="insp-badge">Casamientos</span>
+            <h3>Momentos irrepetibles</h3>
+            <p>Cada detalle del día más especial.</p>
+            <div class="insp-action">
+                <a class="insp-cta" href="https://wa.me/5491161692631?text=Hola%2C%20me%20interesa%20contratar%20fotograf%C3%ADa%20de%20casamiento." target="_blank">Contratar →</a>
+            </div>
+        </div>
+    </article>
+
+    <article class="insp-card" data-cat="pared impresion">
+        <div class="insp-img foto-img-wrap">
+            <img src="img/combo7.jpg" alt="Álbum familiar" loading="lazy">
+        </div>
+        <div class="insp-body">
+            <span class="insp-badge">Paredes</span>
+            <h3>Álbum familiar</h3>
+            <p>100 recuerdos plasmados en 13×18. Para tener siempre cerca.</p>
+            <div class="insp-action">
+                <a class="insp-cta" href="https://wa.me/5491161692631?text=Hola%2C%20me%20interesa%20un%20%C3%A1lbum%20familiar" target="_blank">Pedir →</a>
+            </div>
+        </div>
+    </article>
+
+    <article class="insp-card insp-type-foto" data-cat="evento">
+        <div class="insp-img foto-img-wrap">
+            <img src="https://res.cloudinary.com/dkpachrss/image/upload/w_600,q_auto,f_auto/DSC02940_prckdx.jpg" alt="Evento" loading="lazy">
+        </div>
+        <div class="insp-body">
+            <span class="insp-badge">Eventos</span>
+            <h3>Celebraciones</h3>
+            <p>Cumpleaños, graduaciones y festejos únicos.</p>
+            <div class="insp-action">
+                <a class="insp-cta" href="https://wa.me/5491161692631?text=Hola%2C%20me%20interesa%20contratar%20fotograf%C3%ADa%20de%20evento." target="_blank">Contratar →</a>
+            </div>
+        </div>
+    </article>
+
+    <article class="insp-card" data-cat="regalo impresion">
+        <div class="insp-img foto-img-wrap">
+            <img src="img/combo6.jpeg" alt="Stickers" loading="lazy">
+        </div>
+        <div class="insp-body">
+            <span class="insp-badge">Stickers</span>
+            <h3>Calcos personalizados</h3>
+            <p>Para eventos, regalos o para ponerlos donde quieras.</p>
+            <div class="insp-action">
+                <a class="insp-cta" href="https://wa.me/5491161692631?text=Hola%2C%20me%20interesan%20stickers%20personalizados" target="_blank">Pedir →</a>
+            </div>
+        </div>
+    </article>
+
+    <article class="insp-card insp-type-foto" data-cat="casamiento">
+        <div class="insp-img foto-img-wrap">
+            <img src="https://res.cloudinary.com/dkpachrss/image/upload/w_600,q_auto,f_auto/16_nzhksd.png" alt="Casamiento fiesta" loading="lazy">
+        </div>
+        <div class="insp-body">
+            <span class="insp-badge">Casamientos</span>
+            <h3>La fiesta</h3>
+            <p>Alegría, baile y emoción para recordar siempre.</p>
+            <div class="insp-action">
+                <a class="insp-cta" href="https://wa.me/5491161692631?text=Hola%2C%20me%20interesa%20contratar%20fotograf%C3%ADa%20de%20casamiento." target="_blank">Contratar →</a>
+            </div>
+        </div>
+    </article>
+
+    <article class="insp-card" data-cat="regalo impresion">
+        <div class="insp-img foto-img-wrap">
+            <img src="img/combo4.jpeg" alt="Souvenir imantado" loading="lazy">
+        </div>
+        <div class="insp-body">
+            <span class="insp-badge">Souvenirs</span>
+            <h3>Souvenir para tu evento</h3>
+            <p>Fotografías imantadas personalizadas en alta calidad.</p>
+            <div class="insp-action">
+                <a class="insp-cta" href="https://wa.me/5491161692631?text=Hola%2C%20me%20interesan%20souvenirs%20imantados" target="_blank">Pedir →</a>
+            </div>
+        </div>
+    </article>
+
+    <article class="insp-card insp-type-foto" data-cat="evento">
+        <div class="insp-img foto-img-wrap">
+            <img src="https://res.cloudinary.com/dkpachrss/image/upload/w_600,q_auto,f_auto/DSC02901_ewgxgh.jpg" alt="Fotografía de evento" loading="lazy">
+        </div>
+        <div class="insp-body">
+            <span class="insp-badge">Eventos</span>
+            <h3>La emoción del momento</h3>
+            <p>Fotografía candid que cuenta historias.</p>
+            <div class="insp-action">
+                <a class="insp-cta" href="https://wa.me/5491161692631?text=Hola%2C%20me%20interesa%20contratar%20fotograf%C3%ADa%20de%20evento." target="_blank">Contratar →</a>
+            </div>
+        </div>
+    </article>
+
+    <article class="insp-card" data-cat="pared regalo impresion">
+        <div class="insp-img foto-img-wrap">
+            <img src="img/combo11.jpg" alt="Almanaque familiar" loading="lazy">
+        </div>
+        <div class="insp-body">
+            <span class="insp-badge">Paredes</span>
+            <h3>Almanaque familiar 2026</h3>
+            <p>Foto + calendario + imán. El regalo perfecto.</p>
+            <div class="insp-action">
+                <a class="insp-cta" href="https://wa.me/5491161692631?text=Hola%2C%20me%20interesa%20el%20Almanaque%20familiar" target="_blank">Pedir →</a>
+            </div>
+        </div>
+    </article>
+
+    <article class="insp-card" data-cat="regalo impresion">
+        <div class="insp-img foto-img-wrap">
+            <img src="img/combo2.jpeg" alt="Pack fotográfico" loading="lazy">
+        </div>
+        <div class="insp-body">
+            <span class="insp-badge">Regalos</span>
+            <h3>Pack Fotográfico</h3>
+            <p>Fotos impresas en alta calidad. El regalo que siempre emociona.</p>
+            <div class="insp-action">
+                <a class="insp-cta" href="https://wa.me/5491161692631?text=Hola%2C%20me%20interesa%20el%20Pack%20Fotogr%C3%A1fico" target="_blank">Pedir →</a>
+            </div>
+        </div>
+    </article>
+
+    <article class="insp-card" data-cat="regalo impresion">
+        <div class="insp-img foto-img-wrap">
+            <img src="img/combo3.jpeg" alt="Cajita San Valentín" loading="lazy">
+        </div>
+        <div class="insp-body">
+            <span class="insp-badge">Regalos</span>
+            <h3>Cajita de San Valentín</h3>
+            <p>Para sorprender a tu pareja con algo creativo y personalizable.</p>
+            <div class="insp-action">
+                <a class="insp-cta" href="https://wa.me/5491161692631?text=Hola%2C%20me%20interesa%20la%20Cajita%20de%20San%20Valent%C3%ADn" target="_blank">Pedir →</a>
+            </div>
+        </div>
+    </article>
+
+</section>
+
+<section class="insp-cta-section">
+    <div class="insp-cta-inner">
+        <h2>¿Te inspiraste?</h2>
+        <p>Hacé realidad esa idea. Escribinos y lo armamos juntos.</p>
+        <a class="insp-cta-wa" href="https://wa.me/5491161692631?text=Hola%2C%20quisiera%20consultar%20sobre%20un%20pedido%20personalizado" target="_blank">Escribirnos →</a>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <div class="footer-inner">
+        <span class="footer-logo">MEDIO PIXEL</span>
+        <span>© 2026 — Todos los derechos reservados</span>
+    </div>
+</footer>
+
+<script src="inspiracion.js"></script>
+
+<!-- LIGHTBOX INSPIRACIÓN -->
+<div class="insp-lb" id="inspLb" role="dialog" aria-label="Vista previa">
+    <div class="insp-lb-bg" id="inspLbBg"></div>
+    <button class="insp-lb-close" id="inspLbClose" aria-label="Cerrar">✕</button>
+    <button class="insp-lb-prev" id="inspLbPrev" aria-label="Anterior">‹</button>
+    <button class="insp-lb-next" id="inspLbNext" aria-label="Siguiente">›</button>
+    <div class="insp-lb-content" id="inspLbContent">
+        <div class="insp-lb-img-wrap">
+            <img id="inspLbImg" src="" alt="">
+        </div>
+        <div class="insp-lb-info" id="inspLbInfo">
+            <span class="insp-lb-badge" id="inspLbBadge"></span>
+            <h3 id="inspLbTitle"></h3>
+            <p id="inspLbDesc"></p>
+            <a class="insp-lb-cta" id="inspLbCta" href="#" target="_blank"></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

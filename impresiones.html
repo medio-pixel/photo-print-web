@@ -4,24 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Impresiones | Medio Pixel</title>
+    <meta name="description" content="Impresiones fotográficas y papelería creativa personalizada. Polaroids, packs de cumple, casamiento, souvenirs y más. Berazategui, Buenos Aires.">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Impresiones | Medio Pixel">
+    <meta property="og:description" content="Productos personalizados: polaroids, packs de cumple, casamiento, souvenirs, stickers y álbumes.">
+    <meta property="og:image" content="img/combo9.jpg">
+    <meta property="og:type" content="website">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="funciones.css">
     <link rel="icon" type="image/png" href="img/logo-medio-pixel.png">
 </head>
 
 <body>
 <canvas id="pixel-canvas"></canvas>
 
+<header>
 <nav class="navbar">
     <a class="nav-logo" href="index.html">MEDIO PIXEL</a>
     <div class="nav-links">
         <a href="fotografia.html">Fotografía</a>
         <a href="catalogo.html">Catálogo</a>
+        <a href="inspiracion.html">Inspiración</a>
         <a href="#contacto">Contacto</a>
         <a class="btn btn-nav" href="https://wa.me/5491161692631" target="_blank">WhatsApp</a>
     </div>
 </nav>
+</header>
 
-<header class="hero">
+<main>
+
+<!-- NAV RÁPIDA DE SECCIONES -->
+<nav class="imp-subnav" aria-label="Secciones de impresiones">
+    <a class="imp-subnav-link" href="#catalogo-section">🖼 Catálogo</a>
+    <span class="imp-subnav-sep">·</span>
+    <a class="imp-subnav-link" href="#calculadora">🧮 Calculadora</a>
+    <span class="imp-subnav-sep">·</span>
+    <a class="imp-subnav-link" href="#herramienta">🔍 Verificar foto</a>
+    <span class="imp-subnav-sep">·</span>
+    <a class="imp-subnav-link" href="#papeles">📄 Comparar papeles</a>
+    <span class="imp-subnav-sep">·</span>
+    <a class="imp-subnav-link" href="#confianza">❓ FAQ</a>
+</nav>
+
+<header class="hero" id="catalogo-section">
     <div class="hero-content">
         <p class="hero-tag">Impresiones fotográficas y papelería creativa</p>
         <h1>Regalá memorias.</h1>
@@ -42,7 +67,7 @@
     <div class="featured-grid">
 
         <a class="featured-card featured-large" href="https://wa.me/p/28219333627754403/5491161692631" target="_blank">
-            <img src="img/combo9.jpg" alt="Pack Cumple">
+            <img src="img/combo9.jpg" alt="Pack Cumple" loading="lazy">
             <div class="featured-overlay">
                 <span class="featured-badge">⭐ El más popular</span>
                 <h3>Pack Cumple</h3>
@@ -55,7 +80,7 @@
         <div class="featured-column">
 
             <a class="featured-card" href="https://wa.me/p/27323140797335751/5491161692631" target="_blank">
-                <img src="img/combo8.jpg" alt="Pack Casamiento">
+                <img src="img/combo8.jpg" alt="Pack Casamiento" loading="lazy">
                 <div class="featured-overlay">
                     <span class="featured-badge">💍 Para el gran día</span>
                     <h3>Pack Casamiento</h3>
@@ -66,7 +91,7 @@
             </a>
 
             <a class="featured-card" href="https://wa.me/p/28028265713443707/5491161692631" target="_blank">
-                <img src="img/combo1.jpeg" alt="Combo Retro Polaroid">
+                <img src="img/combo1.jpeg" alt="Combo Retro Polaroid" loading="lazy">
                 <div class="featured-overlay">
                     <span class="featured-badge">📷 Clásico</span>
                     <h3>Combo Retro Polaroid</h3>
@@ -134,6 +159,208 @@
     </div>
 </section>
 
+<!-- ══════════════════════════════════════════
+     CALCULADORA DE IMPRESIONES
+══════════════════════════════════════════ -->
+<section class="imp-calc reveal" id="calculadora" aria-label="Calculadora de impresiones">
+    <div class="imp-calc-inner">
+        <div class="section-header">
+            <span class="section-tag">Herramientas</span>
+            <h2>Calculá tu pedido</h2>
+        </div>
+
+        <div class="imp-calc-grid">
+
+            <!-- Columna izquierda: configurador -->
+            <div class="imp-calc-form">
+
+                <!-- Tamaño -->
+                <div class="imp-field">
+                    <label class="imp-label">Tamaño</label>
+                    <div class="imp-options" id="calcTamano">
+                        <button class="imp-opt active" data-tamano="10x15">10×15</button>
+                        <button class="imp-opt" data-tamano="13x18">13×18</button>
+                        <button class="imp-opt" data-tamano="15x21">15×21</button>
+                        <button class="imp-opt" data-tamano="20x30">20×30</button>
+                        <button class="imp-opt" data-tamano="30x40">30×40</button>
+                        <button class="imp-opt" data-tamano="30x45">30×45</button>
+                    </div>
+                </div>
+
+                <!-- Papel -->
+                <div class="imp-field">
+                    <label class="imp-label">Tipo de papel</label>
+                    <div class="imp-options" id="calcPapel">
+                        <button class="imp-opt active" data-papel="brillante">Brillante</button>
+                        <button class="imp-opt" data-papel="mate">Mate</button>
+                        <button class="imp-opt" data-papel="satinado">Satinado</button>
+                        <button class="imp-opt" data-papel="fineart">Fine Art</button>
+                    </div>
+                </div>
+
+                <!-- Cantidad -->
+                <div class="imp-field">
+                    <label class="imp-label">Cantidad: <span id="calcCantNum">1</span></label>
+                    <input type="range" id="calcCant" min="1" max="100" value="1" class="imp-range">
+                    <div class="imp-range-labels"><span>1</span><span>100</span></div>
+                </div>
+
+            </div>
+
+            <!-- Columna derecha: resultado -->
+            <div class="imp-calc-result">
+                <div class="imp-price-box">
+                    <span class="imp-price-unit">Precio unitario</span>
+                    <span class="imp-price-val" id="calcPrecioUnit">$800</span>
+                    <div class="imp-price-divider"></div>
+                    <span class="imp-price-total-label">Total</span>
+                    <span class="imp-price-total" id="calcPrecioTotal">$800</span>
+                    <div class="imp-pack-sugerido" id="calcPackSugerido"></div>
+                </div>
+                <a class="btn btn-primary imp-wa-btn" id="calcWaBtn" href="#" target="_blank">
+                    Hacer pedido por WhatsApp →
+                </a>
+                <p class="imp-entrega">⏱ Entrega estimada: <strong>3-5 días hábiles</strong></p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     HERRAMIENTA: SUBIR FOTO (calidad + recorte)
+══════════════════════════════════════════ -->
+<section class="imp-tool reveal" id="herramienta" aria-label="Verificar foto">
+    <div class="imp-tool-inner">
+        <div class="section-header">
+            <span class="section-tag">Antes de imprimir</span>
+            <h2>Verificá tu foto</h2>
+        </div>
+
+        <div class="imp-tool-grid">
+
+            <!-- Upload -->
+            <div class="imp-upload-col">
+                <div class="imp-drop" id="impDrop">
+                    <input type="file" id="impFile" accept="image/*" multiple>
+                    <div class="imp-drop-icon">📸</div>
+                    <p class="imp-drop-text">Arrastrá tus fotos acá<br><span>o hacé clic para seleccionar</span></p>
+                    <p class="imp-drop-note">Hasta 100 fotos · JPG, PNG, WEBP</p>
+                </div>
+                <div class="imp-file-list" id="impFileList"></div>
+            </div>
+
+            <!-- Detector de calidad + recorte -->
+            <div class="imp-analysis-col" id="impAnalysis" style="display:none">
+                <div class="imp-quality-badge" id="impQuality"></div>
+
+                <div class="imp-crop-wrap">
+                    <p class="imp-crop-label">Vista previa de recorte</p>
+                    <div class="imp-crop-size-sel" id="impCropSizes"></div>
+                    <canvas id="impCanvas" class="imp-canvas"></canvas>
+                    <p class="imp-crop-note">La zona oscura se recortará al imprimir en el tamaño elegido.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     COMPARADOR DE PAPELES
+══════════════════════════════════════════ -->
+<section class="imp-papers reveal" id="papeles" aria-label="Comparador de papeles">
+    <div class="imp-papers-inner">
+        <div class="section-header">
+            <span class="section-tag">¿Qué papel elegir?</span>
+            <h2>Comparador de papeles</h2>
+        </div>
+
+        <div class="imp-papers-tabs">
+            <button class="imp-paper-tab active" data-paper="brillante">Brillante</button>
+            <button class="imp-paper-tab" data-paper="mate">Mate</button>
+            <button class="imp-paper-tab" data-paper="satinado">Satinado</button>
+            <button class="imp-paper-tab" data-paper="fineart">Fine Art</button>
+        </div>
+
+        <div class="imp-papers-display" id="papersDisplay">
+            <div class="imp-paper-preview" id="paperPreview">
+                <div class="imp-paper-img-wrap" id="paperImgWrap">
+                    <img src="img/combo1.jpeg" alt="Muestra de papel brillante" id="paperImg">
+                    <div class="imp-zoom-hint">🔍 Zoom al pasar el mouse</div>
+                </div>
+                <div class="imp-paper-zoom" id="paperZoom"></div>
+            </div>
+            <div class="imp-paper-info" id="paperInfo">
+                <h3 id="paperName">Brillante</h3>
+                <p id="paperDesc">Acabado clásico con brillo intenso. Colores vivos y profundos. Ideal para fotografías de retrato, eventos y regalos.</p>
+                <ul id="paperPros">
+                    <li>✓ Colores más intensos</li>
+                    <li>✓ Negros profundos</li>
+                    <li>✓ El más económico</li>
+                    <li>— Puede reflejar luz</li>
+                </ul>
+                <button class="btn btn-primary" onclick="document.getElementById('calculadora').scrollIntoView({behavior:'smooth'})">Elegir este papel →</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     CONFIANZA + FAQ
+══════════════════════════════════════════ -->
+<section class="imp-trust reveal" id="confianza" aria-label="Por qué elegirnos">
+    <div class="imp-trust-inner">
+        <div class="imp-trust-stats">
+            <div class="imp-stat">
+                <span class="imp-stat-num" data-target="15000">0</span>
+                <span class="imp-stat-label">fotos impresas</span>
+            </div>
+            <div class="imp-stat">
+                <span class="imp-stat-num" data-target="500">0</span>
+                <span class="imp-stat-label">clientes felices</span>
+            </div>
+            <div class="imp-stat">
+                <span class="imp-stat-num">3-5</span>
+                <span class="imp-stat-label">días de entrega</span>
+            </div>
+        </div>
+
+        <div class="imp-faq">
+            <div class="section-header">
+                <span class="section-tag">Preguntas frecuentes</span>
+                <h2>FAQ</h2>
+            </div>
+            <div class="imp-faq-list">
+                <details class="imp-faq-item">
+                    <summary>¿Cómo envío mis fotos?</summary>
+                    <p>Por WhatsApp o email. Si tenés muchas fotos podés usar WeTransfer o Google Drive y mandarnos el link.</p>
+                </details>
+                <details class="imp-faq-item">
+                    <summary>¿Qué resolución necesita mi foto?</summary>
+                    <p>Para obtener buena calidad necesitás al menos 150 DPI en el tamaño final. Usá nuestra herramienta de verificación para saberlo antes de ordenar.</p>
+                </details>
+                <details class="imp-faq-item">
+                    <summary>¿Hacen envíos?</summary>
+                    <p>Sí. Envíos a todo el país por correo o moto. También retiro en Berazategui sin costo.</p>
+                </details>
+                <details class="imp-faq-item">
+                    <summary>¿Cuánto tarda el pedido?</summary>
+                    <p>Entre 3 y 5 días hábiles desde que confirmás el pago. Para pedidos urgentes consultá disponibilidad.</p>
+                </details>
+                <details class="imp-faq-item">
+                    <summary>¿Qué medios de pago aceptan?</summary>
+                    <p>Transferencia bancaria, Mercado Pago y efectivo en retiro.</p>
+                </details>
+                <details class="imp-faq-item">
+                    <summary>¿Puedo pedir un pack personalizado?</summary>
+                    <p>¡Claro! Escribinos por WhatsApp y armamos el pack ideal para tu evento o regalo.</p>
+                </details>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section id="contacto" class="contact-section reveal">
     <div class="contact-inner">
         <h2>¿Tenés alguna duda?</h2>
@@ -147,6 +374,8 @@
     </div>
 </section>
 
+</main>
+
 <footer>
     <div class="footer-inner">
         <span class="footer-logo">MEDIO PIXEL</span>
@@ -155,5 +384,6 @@
 </footer>
 
 <script src="pixel.js"></script>
+<script src="impresiones.js"></script>
 </body>
 </html>

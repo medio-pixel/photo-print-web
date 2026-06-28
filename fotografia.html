@@ -3,144 +3,328 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fotografía | Medio Pixel</title>
+    <title>Fotografía | Medio Pixel — Camila Ramirez</title>
+    <meta name="description" content="Portfolio de fotografía profesional de Camila Ramirez. Conciertos, casamientos y eventos.">
+    <meta property="og:title" content="Fotografía | Medio Pixel — Camila Ramirez">
+    <meta property="og:description" content="Conciertos, casamientos y eventos capturados con autenticidad.">
+    <meta property="og:url" content="https://medio-pixel.com.ar/fotografia.html">
     <link rel="stylesheet" href="foto.css">
+    <link rel="stylesheet" href="funciones.css">
     <link rel="icon" type="image/png" href="img/logo-medio-pixel.png">
 </head>
 
 <body class="foto-page">
 
-    <!-- ── NAVBAR ── -->
-    <nav class="foto-nav">
-        <a class="foto-nav-logo" href="index.html">MEDIO PIXEL</a>
-        <div class="foto-nav-links">
-            <a href="fotografia.html" class="active">Fotografía</a>
-            <a href="impresiones.html">Impresiones</a>
-            <a href="#foto-contacto">Contacto</a>
-            <a class="foto-btn-nav" href="https://wa.me/5491161692631" target="_blank">WhatsApp</a>
-        </div>
-    </nav>
-
-    <!-- ── HERO ── -->
-    <header class="foto-hero">
-        <!--
-            FOTO PRINCIPAL DE PORTADA:
-            Reemplazá el src con tu mejor foto horizontal.
-            Recomendado: 1920x1080px mínimo.
-            Ejemplo Cloudinary: src="https://res.cloudinary.com/TU_CUENTA/image/upload/w_1920,q_auto/foto.jpg"
-        -->
-        <div class="foto-hero-bg">
-            <!-- <img src="TU_FOTO_AQUI" alt="Fotografía Eric Fortino"> -->
-            <div class="foto-hero-placeholder"></div>
-        </div>
-        <div class="foto-hero-overlay"></div>
-        <div class="foto-hero-content">
-            <p class="foto-eyebrow">Eric Fortino · Fotógrafo</p>
-            <h1 class="foto-hero-title">Momentos<br><em>que perduran</em></h1>
-            <p class="foto-hero-sub">Conciertos, casamientos y eventos — capturados con autenticidad.</p>
-            <a class="foto-btn foto-btn-primary" href="#galeria">Ver trabajos</a>
-        </div>
+    <!-- ── NAV ── -->
+    <header>
+        <nav class="fn" id="nav">
+            <a class="fn-logo" href="index.html">MEDIO PIXEL</a>
+            <div class="fn-links">
+                <a href="impresiones.html">Impresiones</a>
+                <a href="inspiracion.html">Inspiración</a>
+                <a href="#contacto">Contacto</a>
+                <a class="fn-cta" href="https://wa.me/5491161692631" target="_blank">WhatsApp</a>
+            </div>
+        </nav>
     </header>
 
-    <!-- ── CATEGORÍAS ── -->
-    <section class="foto-categorias" id="galeria">
-        <div class="foto-section-header">
-            <p class="foto-tag">Portafolio</p>
-            <h2>Cada momento, su historia</h2>
+    <main>
+
+    <!-- ══════════════════════════════════════════
+         HERO — fullscreen slideshow
+    ══════════════════════════════════════════ -->
+    <section class="fh" aria-label="Portada">
+        <div class="fh-slides">
+            <div class="fh-slide active">
+                <div class="fh-img-wrap"><img src="https://res.cloudinary.com/dkpachrss/image/upload/w_1920,q_auto,f_auto/DSC05096_btpvnh.jpg" alt="Concierto"></div>
+            </div>
+            <div class="fh-slide">
+                <div class="fh-img-wrap"><img src="https://res.cloudinary.com/dkpachrss/image/upload/w_1920,q_auto,f_auto/DSC07410_oxngf3.jpg" alt="Evento"></div>
+            </div>
+            <div class="fh-slide">
+                <div class="fh-img-wrap"><img src="https://res.cloudinary.com/dkpachrss/image/upload/w_1920,q_auto,f_auto/DSC05208s_vf4wji.jpg" alt="Concierto"></div>
+            </div>
+        </div>
+        <div class="fh-overlay"></div>
+        <div class="fh-content">
+            <p class="fh-name">Camila Ramirez</p>
+            <h1 class="fh-title">Fotógrafa</h1>
+            <div class="fh-line"></div>
+            <p class="fh-sub">Conciertos · Casamientos · Eventos</p>
+        </div>
+        <div class="fh-scroll"><span></span></div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         PORTFOLIO — horizontal filmstrips
+    ══════════════════════════════════════════ -->
+
+    <!-- NAV RÁPIDA DE SECCIONES -->
+    <nav class="fsn" aria-label="Secciones de fotografía">
+        <a class="fsn-link" href="#portfolio">🎞 Portfolio</a>
+        <span class="fsn-sep">·</span>
+        <a class="fsn-link" href="#edicion">✂️ Antes &amp; Después</a>
+        <span class="fsn-sep">·</span>
+        <a class="fsn-link" href="#test-estilo">🎯 Test de estilo</a>
+        <span class="fsn-sep">·</span>
+        <a class="fsn-link" href="#testimonios">💬 Testimonios</a>
+        <span class="fsn-sep">·</span>
+        <a class="fsn-link" href="#contacto">📲 Contacto</a>
+    </nav>
+    <section class="fp" id="portfolio" aria-label="Portfolio">
+
+        <!-- CONCIERTOS -->
+        <div class="fp-section">
+            <div class="fp-header">
+                <span class="fp-num">01</span>
+                <h2 class="fp-title">Conciertos</h2>
+            </div>
+            <div class="fp-strip">
+                <div class="fp-track">
+                    <div class="fp-img fp-v"><div class="foto-img-wrap"><img src="https://res.cloudinary.com/dkpachrss/image/upload/w_700,q_auto,f_auto/DSC04937_g9rs9b.jpg" alt="Concierto" loading="lazy"></div></div>
+                    <div class="fp-img fp-h"><div class="foto-img-wrap"><img src="https://res.cloudinary.com/dkpachrss/image/upload/w_900,q_auto,f_auto/DSC05208s_vf4wji.jpg" alt="Concierto" loading="lazy"></div></div>
+                    <div class="fp-img fp-v"><div class="foto-img-wrap"><img src="https://res.cloudinary.com/dkpachrss/image/upload/w_700,q_auto,f_auto/DSC05149_ipxsvj.jpg" alt="Concierto" loading="lazy"></div></div>
+                    <div class="fp-img fp-h"><div class="foto-img-wrap"><img src="https://res.cloudinary.com/dkpachrss/image/upload/w_900,q_auto,f_auto/DSC05085_ww7bvv.jpg" alt="Concierto" loading="lazy"></div></div>
+                    <div class="fp-img fp-v"><div class="foto-img-wrap"><img src="https://res.cloudinary.com/dkpachrss/image/upload/w_700,q_auto,f_auto/DSC05420_wh0rgn.jpg" alt="Concierto" loading="lazy"></div></div>
+                    <div class="fp-img fp-h"><div class="foto-img-wrap"><img src="https://res.cloudinary.com/dkpachrss/image/upload/w_900,q_auto,f_auto/DSC05077_je2krh.jpg" alt="Concierto" loading="lazy"></div></div>
+                    <div class="fp-img fp-v"><div class="foto-img-wrap"><img src="https://res.cloudinary.com/dkpachrss/image/upload/w_700,q_auto,f_auto/DSC05298_xaw1dg.jpg" alt="Concierto" loading="lazy"></div></div>
+                    <div class="fp-img fp-h"><div class="foto-img-wrap"><img src="https://res.cloudinary.com/dkpachrss/image/upload/w_900,q_auto,f_auto/DSC05359_tjhk0y.jpg" alt="Concierto" loading="lazy"></div></div>
+                    <div class="fp-img fp-v"><div class="foto-img-wrap"><img src="https://res.cloudinary.com/dkpachrss/image/upload/w_700,q_auto,f_auto/DSC05044_z2kfbf.jpg" alt="Concierto" loading="lazy"></div></div>
+                    <div class="fp-img fp-h"><div class="foto-img-wrap"><img src="https://res.cloudinary.com/dkpachrss/image/upload/w_900,q_auto,f_auto/DSC04982_o3ssbm.jpg" alt="Concierto" loading="lazy"></div></div>
+                    <div class="fp-img fp-v"><div class="foto-img-wrap"><img src="https://res.cloudinary.com/dkpachrss/image/upload/w_700,q_auto,f_auto/DSC04917_tcjrov.jpg" alt="Concierto" loading="lazy"></div></div>
+                    <div class="fp-img fp-h"><div class="foto-img-wrap"><img src="https://res.cloudinary.com/dkpachrss/image/upload/w_900,q_auto,f_auto/DSC04921_ipnjm7.jpg" alt="Concierto" loading="lazy"></div></div>
+                    <div class="fp-img fp-h"><div class="foto-img-wrap"><img src="https://res.cloudinary.com/dkpachrss/image/upload/w_900,q_auto,f_auto/DSC04927_yoa0uk.jpg" alt="Concierto" loading="lazy"></div></div>
+                    <div class="fp-img fp-v"><div class="foto-img-wrap"><img src="https://res.cloudinary.com/dkpachrss/image/upload/w_700,q_auto,f_auto/DSC05425_cfxwm8.jpg" alt="Concierto" loading="lazy"></div></div>
+                    <div class="fp-img fp-h"><div class="foto-img-wrap"><img src="https://res.cloudinary.com/dkpachrss/image/upload/w_900,q_auto,f_auto/DSC04981_bccuot.jpg" alt="Concierto" loading="lazy"></div></div>
+                    <div class="fp-img fp-v"><div class="foto-img-wrap"><img src="https://res.cloudinary.com/dkpachrss/image/upload/w_700,q_auto,f_auto/DSC07514_zas43e.jpg" alt="Concierto" loading="lazy"></div></div>
+                    <div class="fp-img fp-v"><div class="foto-img-wrap"><img src="https://res.cloudinary.com/dkpachrss/image/upload/w_700,q_auto,f_auto/DSC07407_jahbxr.jpg" alt="Concierto" loading="lazy"></div></div>
+                    <div class="fp-img fp-v"><div class="foto-img-wrap"><img src="https://res.cloudinary.com/dkpachrss/image/upload/w_700,q_auto,f_auto/DSC07399_hpygal.jpg" alt="Concierto" loading="lazy"></div></div>
+                    <div class="fp-img fp-v"><div class="foto-img-wrap"><img src="https://res.cloudinary.com/dkpachrss/image/upload/w_700,q_auto,f_auto/DSC07343_fa8cwr.jpg" alt="Concierto" loading="lazy"></div></div>
+                    <div class="fp-img fp-h"><div class="foto-img-wrap"><img src="https://res.cloudinary.com/dkpachrss/image/upload/w_900,q_auto,f_auto/DSC07410_oxngf3.jpg" alt="Concierto" loading="lazy"></div></div>
+                </div>
+            </div>
         </div>
 
-        <div class="foto-cat-grid">
-
-            <!-- CATEGORÍA: CONCIERTOS -->
-            <div class="foto-cat-card">
-                <!--
-                    Reemplazá el placeholder por:
-                    <img src="TU_FOTO_CONCIERTO" alt="Fotografía de conciertos">
-                -->
-                <div class="foto-cat-placeholder foto-cat-conciertos"></div>
-                <div class="foto-cat-overlay">
-                    <h3>Conciertos</h3>
-                    <p>La energía del escenario, congelada en el tiempo.</p>
-                    <span class="foto-cat-cta">Ver fotos →</span>
+        <!-- CASAMIENTOS -->
+        <div class="fp-section">
+            <div class="fp-header">
+                <span class="fp-num">02</span>
+                <h2 class="fp-title">Casamientos</h2>
+            </div>
+            <div class="fp-strip">
+                <div class="fp-track">
+                    <div class="fp-img fp-h"><div class="foto-img-wrap"><img src="https://res.cloudinary.com/dkpachrss/image/upload/w_900,q_auto,f_auto/3_v5tl0z.png" alt="Casamiento" loading="lazy"></div></div>
+                    <div class="fp-img fp-h"><div class="foto-img-wrap"><img src="https://res.cloudinary.com/dkpachrss/image/upload/w_900,q_auto,f_auto/5_qaefsk.png" alt="Casamiento" loading="lazy"></div></div>
+                    <div class="fp-img fp-h"><div class="foto-img-wrap"><img src="https://res.cloudinary.com/dkpachrss/image/upload/w_900,q_auto,f_auto/6_aucsuv.png" alt="Casamiento" loading="lazy"></div></div>
+                    <div class="fp-img fp-h"><div class="foto-img-wrap"><img src="https://res.cloudinary.com/dkpachrss/image/upload/w_900,q_auto,f_auto/8_wp7znp.png" alt="Casamiento" loading="lazy"></div></div>
+                    <div class="fp-img fp-h"><div class="foto-img-wrap"><img src="https://res.cloudinary.com/dkpachrss/image/upload/w_900,q_auto,f_auto/9_r5xkuz.png" alt="Casamiento" loading="lazy"></div></div>
+                    <div class="fp-img fp-h"><div class="foto-img-wrap"><img src="https://res.cloudinary.com/dkpachrss/image/upload/w_900,q_auto,f_auto/10_jwynir.png" alt="Casamiento" loading="lazy"></div></div>
+                    <div class="fp-img fp-h"><div class="foto-img-wrap"><img src="https://res.cloudinary.com/dkpachrss/image/upload/w_900,q_auto,f_auto/12_ftnxid.png" alt="Casamiento" loading="lazy"></div></div>
+                    <div class="fp-img fp-h"><div class="foto-img-wrap"><img src="https://res.cloudinary.com/dkpachrss/image/upload/w_900,q_auto,f_auto/14_drgg1b.png" alt="Casamiento" loading="lazy"></div></div>
+                    <div class="fp-img fp-h"><div class="foto-img-wrap"><img src="https://res.cloudinary.com/dkpachrss/image/upload/w_900,q_auto,f_auto/16_nzhksd.png" alt="Casamiento" loading="lazy"></div></div>
+                    <div class="fp-img fp-h"><div class="foto-img-wrap"><img src="https://res.cloudinary.com/dkpachrss/image/upload/w_900,q_auto,f_auto/20_y3eyb2.png" alt="Casamiento" loading="lazy"></div></div>
+                    <div class="fp-img fp-h"><div class="foto-img-wrap"><img src="https://res.cloudinary.com/dkpachrss/image/upload/w_900,q_auto,f_auto/22_pz1zrf.png" alt="Casamiento" loading="lazy"></div></div>
+                    <div class="fp-img fp-h"><div class="foto-img-wrap"><img src="https://res.cloudinary.com/dkpachrss/image/upload/w_900,q_auto,f_auto/24_hqy0xp.png" alt="Casamiento" loading="lazy"></div></div>
                 </div>
             </div>
+        </div>
 
-            <!-- CATEGORÍA: CASAMIENTOS -->
-            <div class="foto-cat-card">
-                <!--
-                    <img src="TU_FOTO_CASAMIENTO" alt="Fotografía de casamientos">
-                -->
-                <div class="foto-cat-placeholder foto-cat-casamientos"></div>
-                <div class="foto-cat-overlay">
-                    <h3>Casamientos</h3>
-                    <p>El día más importante, con cada detalle inmortalizado.</p>
-                    <span class="foto-cat-cta">Ver fotos →</span>
+        <!-- EVENTOS -->
+        <div class="fp-section">
+            <div class="fp-header">
+                <span class="fp-num">03</span>
+                <h2 class="fp-title">Eventos</h2>
+            </div>
+            <div class="fp-strip">
+                <div class="fp-track">
+                    <div class="fp-img fp-h"><div class="foto-img-wrap"><img src="https://res.cloudinary.com/dkpachrss/image/upload/w_900,q_auto,f_auto/DSC02901_ewgxgh.jpg" alt="Evento" loading="lazy"></div></div>
+                    <div class="fp-img fp-v"><div class="foto-img-wrap"><img src="https://res.cloudinary.com/dkpachrss/image/upload/w_700,q_auto,f_auto/DSC02936_zcrcyd.jpg" alt="Evento" loading="lazy"></div></div>
+                    <div class="fp-img fp-h"><div class="foto-img-wrap"><img src="https://res.cloudinary.com/dkpachrss/image/upload/w_900,q_auto,f_auto/DSC02940_prckdx.jpg" alt="Evento" loading="lazy"></div></div>
+                    <div class="fp-img fp-v"><div class="foto-img-wrap"><img src="https://res.cloudinary.com/dkpachrss/image/upload/w_700,q_auto,f_auto/DSC03044_uep83w.jpg" alt="Evento" loading="lazy"></div></div>
+                    <div class="fp-img fp-v"><div class="foto-img-wrap"><img src="https://res.cloudinary.com/dkpachrss/image/upload/w_700,q_auto,f_auto/DSC02950_fn6mps.jpg" alt="Evento" loading="lazy"></div></div>
+                    <div class="fp-img fp-h"><div class="foto-img-wrap"><img src="https://res.cloudinary.com/dkpachrss/image/upload/w_900,q_auto,f_auto/DSC02941_yznd2b.jpg" alt="Evento" loading="lazy"></div></div>
+                    <div class="fp-img fp-v"><div class="foto-img-wrap"><img src="https://res.cloudinary.com/dkpachrss/image/upload/w_700,q_auto,f_auto/DSC02938_kk8ror.jpg" alt="Evento" loading="lazy"></div></div>
+                    <div class="fp-img fp-v"><div class="foto-img-wrap"><img src="https://res.cloudinary.com/dkpachrss/image/upload/w_700,q_auto,f_auto/DSC02935_bs3sww.jpg" alt="Evento" loading="lazy"></div></div>
                 </div>
             </div>
+        </div>
 
-            <!-- CATEGORÍA: CUMPLEAÑOS / EVENTOS -->
-            <div class="foto-cat-card">
-                <!--
-                    <img src="TU_FOTO_EVENTO" alt="Fotografía de eventos">
-                -->
-                <div class="foto-cat-placeholder foto-cat-eventos"></div>
-                <div class="foto-cat-overlay">
-                    <h3>Eventos</h3>
-                    <p>Cumpleaños, celebraciones y momentos únicos.</p>
-                    <span class="foto-cat-cta">Ver fotos →</span>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         ANTES / DESPUÉS — slider de edición
+    ══════════════════════════════════════════ -->
+    <section class="fba" id="edicion" aria-label="Antes y después">
+        <div class="fba-inner">
+            <div class="fba-header">
+                <span class="fp-num">—</span>
+                <h2 class="fp-title">La diferencia está en la edición</h2>
+            </div>
+            <div class="fba-slider" id="baSlider">
+                <div class="fba-before">
+                    <!-- REEMPLAZAR: foto sin editar -->
+                    <div class="fba-img-wrap">
+                        <img src="https://res.cloudinary.com/dkpachrss/image/upload/w_1200,e_grayscale,q_auto,f_auto/DSC05096_btpvnh.jpg" alt="Antes de edición">
+                    </div>
+                    <span class="fba-label fba-label-before">ANTES</span>
+                </div>
+                <div class="fba-after">
+                    <!-- REEMPLAZAR: misma foto editada -->
+                    <div class="fba-img-wrap">
+                        <img src="https://res.cloudinary.com/dkpachrss/image/upload/w_1200,q_auto,f_auto/DSC05096_btpvnh.jpg" alt="Después de edición">
+                    </div>
+                    <span class="fba-label fba-label-after">DESPUÉS</span>
+                </div>
+                <div class="fba-handle" id="baHandle">
+                    <div class="fba-handle-line"></div>
+                    <div class="fba-handle-circle">
+                        <span>&#8249;</span><span>&#8250;</span>
+                    </div>
                 </div>
             </div>
-
         </div>
     </section>
 
-    <!-- ── SOBRE EL FOTÓGRAFO ── -->
-    <section class="foto-about">
-        <div class="foto-about-inner">
-            <div class="foto-about-img">
-                <!--
-                    FOTO TUYA (retrato o trabajando):
-                    <img src="TU_FOTO_PERFIL" alt="Eric Fortino fotógrafo">
-                -->
-                <div class="foto-about-placeholder"></div>
+    <!-- ══════════════════════════════════════════
+         TEST DE ESTILO
+    ══════════════════════════════════════════ -->
+    <section class="fts" id="test-estilo" aria-label="Test de estilo">
+        <div class="fts-inner">
+            <div class="fba-header">
+                <span class="fp-num">—</span>
+                <h2 class="fp-title">¿Qué tipo de sesión buscás?</h2>
             </div>
-            <div class="foto-about-text">
-                <p class="foto-tag">Sobre mí</p>
-                <!--  Reemplazá este texto cuando tengas tu bio  -->
-                <h2>Hola, soy Eric</h2>
-                <p class="foto-bio">
-                    [Tu biografía va acá. Contá quién sos, qué te apasiona fotografiar,
-                    tu experiencia y tu estilo. Unas 3-4 oraciones es suficiente para
-                    esta sección.]
-                </p>
-                <a class="foto-btn foto-btn-outline" href="#foto-contacto">Trabajemos juntos</a>
+            <p class="fts-sub">Respondé 3 preguntas y te mostramos trabajos similares a lo que imaginás.</p>
+
+            <div class="fts-steps" id="tsSteps">
+
+                <!-- Paso 1 -->
+                <div class="fts-step active" data-step="1">
+                    <p class="fts-question">¿Cuál es la ocasión?</p>
+                    <div class="fts-options">
+                        <button class="fts-opt" data-key="ocasion" data-val="concierto">🎸 Concierto / Show</button>
+                        <button class="fts-opt" data-key="ocasion" data-val="casamiento">💍 Casamiento</button>
+                        <button class="fts-opt" data-key="ocasion" data-val="evento">🎉 Evento / Graduación</button>
+                    </div>
+                </div>
+
+                <!-- Paso 2 -->
+                <div class="fts-step" data-step="2">
+                    <p class="fts-question">¿Qué ambiente preferís?</p>
+                    <div class="fts-options">
+                        <button class="fts-opt" data-key="ambiente" data-val="oscuro">🌑 Oscuro e intenso</button>
+                        <button class="fts-opt" data-key="ambiente" data-val="natural">☀️ Luminoso y natural</button>
+                        <button class="fts-opt" data-key="ambiente" data-val="cualquiera">✨ Me sorprendás</button>
+                    </div>
+                </div>
+
+                <!-- Paso 3 -->
+                <div class="fts-step" data-step="3">
+                    <p class="fts-question">¿Qué te importa más?</p>
+                    <div class="fts-options">
+                        <button class="fts-opt" data-key="prioridad" data-val="emocion">😭 Capturar emociones</button>
+                        <button class="fts-opt" data-key="prioridad" data-val="estetica">🎨 Estética y encuadre</button>
+                        <button class="fts-opt" data-key="prioridad" data-val="espontaneo">🤸 Momentos espontáneos</button>
+                    </div>
+                </div>
+
+                <!-- Resultado -->
+                <div class="fts-step fts-result" data-step="4">
+                    <p class="fts-question">Esto se parece a lo que buscás:</p>
+                    <div class="fts-result-grid" id="tsResultGrid"></div>
+                    <div class="fts-result-actions">
+                        <a class="fc-btn" id="tsWaBtn" href="#" target="_blank">Quiero esta sesión →</a>
+                        <button class="fc-btn fc-btn-ghost" id="tsReset">Volver a empezar</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="fts-progress">
+                <span class="fts-dot active" data-dot="1"></span>
+                <span class="fts-dot" data-dot="2"></span>
+                <span class="fts-dot" data-dot="3"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         TESTIMONIOS
+    ══════════════════════════════════════════ -->
+    <section class="ftm" id="testimonios" aria-label="Testimonios">
+        <div class="ftm-inner">
+            <div class="fba-header">
+                <span class="fp-num">—</span>
+                <h2 class="fp-title">Lo que dicen los clientes</h2>
+            </div>
+            <div class="ftm-grid">
+
+                <article class="ftm-card">
+                    <div class="ftm-photo foto-img-wrap">
+                        <img src="https://res.cloudinary.com/dkpachrss/image/upload/w_500,q_auto,f_auto/DSC02936_zcrcyd.jpg" alt="Foto del cliente" loading="lazy">
+                    </div>
+                    <div class="ftm-body">
+                        <p class="ftm-text">"Las fotos del evento superaron todas las expectativas. Capturó exactamente los momentos que queríamos recordar para siempre."</p>
+                        <p class="ftm-author">— Martina G. <span>Evento familiar</span></p>
+                        <div class="ftm-stars">★★★★★</div>
+                    </div>
+                </article>
+
+                <article class="ftm-card">
+                    <div class="ftm-photo foto-img-wrap">
+                        <img src="https://res.cloudinary.com/dkpachrss/image/upload/w_500,q_auto,f_auto/DSC07399_hpygal.jpg" alt="Foto del cliente" loading="lazy">
+                    </div>
+                    <div class="ftm-body">
+                        <p class="ftm-text">"El concierto quedó inmortalizado. Cada foto tiene una energía increíble. Ya la contratamos para el próximo show."</p>
+                        <p class="ftm-author">— Lucas R. <span>Banda JG Rock</span></p>
+                        <div class="ftm-stars">★★★★★</div>
+                    </div>
+                </article>
+
+                <article class="ftm-card">
+                    <div class="ftm-photo foto-img-wrap">
+                        <img src="https://res.cloudinary.com/dkpachrss/image/upload/w_500,q_auto,f_auto/6_aucsuv.png" alt="Foto del cliente" loading="lazy">
+                    </div>
+                    <div class="ftm-body">
+                        <p class="ftm-text">"Nuestro casamiento quedó hermoso en fotos. Se nota el amor y el detalle en cada imagen. El fotolibro es un tesoro."</p>
+                        <p class="ftm-author">— Cecy &amp; Cris <span>Casamiento</span></p>
+                        <div class="ftm-stars">★★★★★</div>
+                    </div>
+                </article>
+
             </div>
         </div>
     </section>
 
     <!-- ── CONTACTO ── -->
-    <section class="foto-contacto" id="foto-contacto">
-        <div class="foto-contacto-inner">
-            <p class="foto-tag foto-tag-light">Contacto</p>
-            <h2>¿Tenés un evento?</h2>
-            <p>Contame de qué se trata y armamos algo juntos.</p>
-            <div class="foto-contact-links">
-                <a class="foto-btn foto-btn-primary" href="https://wa.me/5491161692631" target="_blank">
-                    Escribime por WhatsApp
-                </a>
-                <a class="foto-btn foto-btn-ghost" href="mailto:camimediopixel@gmail.com">
-                    camimediopixel@gmail.com
-                </a>
+    <section class="fc" id="contacto" aria-label="Contacto">
+        <div class="fc-inner">
+            <h2 class="fc-title">Trabajemos juntos</h2>
+            <p class="fc-sub">Si tenés un evento, una idea o un proyecto, escribime.</p>
+            <div class="fc-links">
+                <a class="fc-btn" id="wa-contacto" href="https://wa.me/5491161692631?text=Hola%20Camila%2C%20me%20gustar%C3%ADa%20hablar%20sobre%20una%20sesi%C3%B3n%20fotogr%C3%A1fica." target="_blank">WhatsApp</a>
+                <a class="fc-btn fc-btn-ghost" href="mailto:camimediopixel@gmail.com">Email</a>
             </div>
         </div>
     </section>
 
-    <footer class="foto-footer">
-        <div class="foto-footer-inner">
-            <span>© 2026 Medio Pixel — Eric Fortino</span>
-            <a href="index.html">← Volver al inicio</a>
-        </div>
+    </main>
+
+    <footer class="ff">
+        <span>© 2026 Camila Ramirez — Medio Pixel</span>
+        <a href="index.html">Inicio</a>
     </footer>
 
+    <!-- LIGHTBOX -->
+    <div class="lb" id="lightbox" role="dialog" aria-label="Visor">
+        <button class="lb-close" aria-label="Cerrar">&times;</button>
+        <button class="lb-prev" aria-label="Anterior">&#10094;</button>
+        <button class="lb-next" aria-label="Siguiente">&#10095;</button>
+        <div class="lb-img-wrap"><img class="lb-img" src="" alt=""></div>
+        <div class="lb-counter"></div>
+    </div>
+
+    <script src="foto.js"></script>
+    <script src="foto-extra.js"></script>
 </body>
 </html>

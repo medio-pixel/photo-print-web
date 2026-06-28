@@ -814,6 +814,23 @@ footer {
 }
 
 /* ══════════════════════════════════════════
+   IMAGE PROTECTION
+══════════════════════════════════════════ */
+.card,
+.featured-card,
+.split-bg {
+    position: relative;
+}
+
+.card::after,
+.featured-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+}
+
+/* ══════════════════════════════════════════
    RESPONSIVE
 ══════════════════════════════════════════ */
 @media (max-width: 900px) {
