@@ -8,10 +8,7 @@ export default defineConfig({
     outDir: 'dist',
     rollupOptions: {
       input: {
-        main:        resolve(__dirname, 'index.html'),
-        impresiones: resolve(__dirname, 'impresiones.html'),
-        fotografia:  resolve(__dirname, 'fotografia.html'),
-        catalogo:    resolve(__dirname, 'catalogo.html')
+        main: resolve(__dirname, 'index.html'),
       }
     },
     minify: 'terser',
