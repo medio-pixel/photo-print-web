@@ -168,13 +168,18 @@
 
 /* ── 4. CARD SLIDERS ── */
 (function () {
+  const AUTOPLAY_INTERVAL = 3000; // ms entre slides
+  const AUTOPLAY_RESUME   = 5000; // ms para retomar tras interacción manual
+
   document.querySelectorAll('.card-slider').forEach(function (slider) {
     const track  = slider.querySelector('.card-slider-track');
     const dots   = slider.querySelectorAll('.slider-dot');
     const count  = parseInt(slider.dataset.count, 10);
     if (count <= 1) return;
 
-    let current = 0;
+    let current   = 0;
+    let autoTimer = null;
+    let resumeTimer = null;
 
     function goTo(idx) {
       current = (idx + count) % count;
@@ -184,18 +189,41 @@
       });
     }
 
+    function startAuto() {
+      stopAuto();
+      autoTimer = setInterval(function () { goTo(current + 1); }, AUTOPLAY_INTERVAL);
+    }
+
+    function stopAuto() {
+      clearInterval(autoTimer);
+      autoTimer = null;
+    }
+
+    /* pausa el autoplay y lo retoma después de AUTOPLAY_RESUME ms */
+    function onManualInteract() {
+      stopAuto();
+      clearTimeout(resumeTimer);
+      resumeTimer = setTimeout(startAuto, AUTOPLAY_RESUME);
+    }
+
     /* flechas — stopPropagation para no disparar el link de la card */
     slider.querySelector('.prev').addEventListener('click', function (e) {
-      e.preventDefault(); e.stopPropagation(); goTo(current - 1);
+      e.preventDefault(); e.stopPropagation();
+      goTo(current - 1);
+      onManualInteract();
     });
     slider.querySelector('.next').addEventListener('click', function (e) {
-      e.preventDefault(); e.stopPropagation(); goTo(current + 1);
+      e.preventDefault(); e.stopPropagation();
+      goTo(current + 1);
+      onManualInteract();
     });
 
     /* dots */
     dots.forEach(function (dot, i) {
       dot.addEventListener('click', function (e) {
-        e.preventDefault(); e.stopPropagation(); goTo(i);
+        e.preventDefault(); e.stopPropagation();
+        goTo(i);
+        onManualInteract();
       });
     });
 
@@ -206,7 +234,13 @@
     }, { passive: true });
     slider.addEventListener('touchend', function (e) {
       var diff = startX - e.changedTouches[0].clientX;
-      if (Math.abs(diff) > 40) goTo(diff > 0 ? current + 1 : current - 1);
+      if (Math.abs(diff) > 40) {
+        goTo(diff > 0 ? current + 1 : current - 1);
+        onManualInteract();
+      }
     });
+
+    /* arrancar autoplay */
+    startAuto();
   });
 })();
